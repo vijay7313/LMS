@@ -1,0 +1,59 @@
+<div class="card col-10 mx-auto mt-3">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-6">
+              <h2 class="text-primary">Users</h2>
+            </div>
+            <div class="col-md-6 text-end">
+              <div><input type="button" class="button" name="addUser" id="addUser" value="Add User" routerLink="/register"/></div>
+            </div>
+        </div>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th> 
+                    <th>User Name</th>  
+                    <th>Email</th>               
+                    <th>Mobile Number</th> 
+                    <!-- <th>Date</th>   -->
+                    <th>Action</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let viewuser of viewusers$ | async">
+                    <td>{{viewuser.id}}</td>
+                    <td>{{viewuser.firstName}}</td>
+                    <td>{{viewuser.lastName}}</td>
+                    <td>{{viewuser.userName}}</td>
+                    <td>{{viewuser.email}}</td>
+                    <td>{{viewuser.mobileNo}}</td>
+                    <td>
+                        <a [routerLink]="['/edituser',viewuser.id]"><button class="btn btn-primary btn-sm me-2"><i class="bi bi-pencil"></i></button></a>                
+                        <a><button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#staticBackdrop" (click)="getUserId(viewuser.id)"><i class="bi bi-trash"></i></button></a>                    
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Delete User</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            Are you sure? Do you want to delete this user?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" (click)="removeUser(userId)">Delete</button>
+        </div>
+      </div>
+    </div>
+</div>

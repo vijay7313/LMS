@@ -1,0 +1,81 @@
+<div class="col-6 mx-auto mt-4">
+    <div class="card">     
+        <div class="card-body">
+            <h2>Register</h2>
+            <form [formGroup]="registrationForm">
+                <div class="error">{{errorMessage}}</div>
+                <div class="form-group">
+                    <label for="" class="form-label">First Name</label>
+                    <input type="text" class="form-control" #firstName formControlName="firstName" required>
+                </div>        
+                <div *ngIf="submitDisabled && registrationForm.controls.firstName.errors">
+                    <div *ngIf="registrationForm.controls.firstName.errors.required" class="error">Please enter your first name.</div>
+                </div>        
+                <div class="form-group">
+                    <label for="" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" #lastName formControlName="lastName" required >
+                </div>
+                <div *ngIf="submitDisabled && registrationForm.controls.lastName.errors">
+                    <div *ngIf="registrationForm.controls.lastName.errors.required" class="error">Please enter your last name.</div>    
+                </div>
+                <div class="form-group">
+                    <label for="" class="form-label">Email</label>
+                    <input type="email" class="form-control" #email formControlName="email" required >
+                </div>           
+                <div *ngIf="submitDisabled && registrationForm.controls.email.errors">
+                    <div *ngIf="registrationForm.controls.email.errors.required" class="error">Please enter your email.</div>
+                </div>
+                <div class="form-group">
+                    <label for="" class="form-label">Mobile Number</label>
+                    <input type="mobileNo"  class="form-control" #mobileNo formControlName="mobileNo" maxlength="10" required>
+                </div>
+                <div *ngIf="submitDisabled && registrationForm.controls.mobileNo.errors">    
+                    <div *ngIf="registrationForm.controls.mobileNo.errors.required" class="error">Please enter your mobile number.</div>    
+                </div>
+                <div class="form-group">
+                    <label for="" class="form-label">Password</label>
+                    <input type="password" class="form-control" #password formControlName="password" maxlength="8" required >
+                </div>
+                <div *ngIf="submitDisabled && registrationForm.controls.password.errors">
+                    <div *ngIf="registrationForm.controls.password.errors.required" class="error">Please enter your password.</div>
+                </div>
+                <div class="form-group">
+                    <label for=""  class="form-label">Domain</label>
+                    <select class="form-control" #domain formControlName="domain" required>
+                        <option value="" selected>Select</option>
+                        <option value="developer">Developer</option>
+                        <option value="tester">Tester</option>
+                        <option value="manager">Manager</option>
+                        <option value="hr">HR</option>
+                        <option value="ceo">CEO</option>
+                        <option value="tuitor">Tuitor</option>
+                    </select>
+                </div>
+                <div *ngIf="submitDisabled && registrationForm.controls.domain.errors">
+                    <div *ngIf="registrationForm.controls.domain.errors.required" class="error">Please choose domain.</div>
+                </div>
+                <div class="mt-2 text-center">
+                    <button type="submit" (click)="addUser()" class="btn btn-primary">Add User</button>
+                </div>
+                <button id="addUser" [hidden]="true" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Open Modal</button>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">User registered successfully</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            Use user name : <b>{{user.userName}}</b> for login.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" (click)="auth.logout()">Login</button>
+        </div>
+      </div>
+    </div>
+</div>

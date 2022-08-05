@@ -1,0 +1,45 @@
+<div class="col-6 mx-auto mt-4">
+    <div class="card">     
+        <div class="card-body">
+            <h2>Edit User</h2>
+            <form >
+                <div class="error">{{errorMessage}}</div>
+                <div class="form-group">
+                    <label for="" class="form-label">id</label>
+                    <input type="text" class="form-control"  value="{{editUser.id}}" readonly required>
+                </div>   
+                <div class="form-group">
+                    <label for="" class="form-label">First Name</label>
+                    <input type="text" class="form-control" #firstName value="{{editUser.firstName}}"  required>
+                </div>        
+                <div *ngIf="submitDisabled && loginForm.controls.firstName.errors">
+                    <div *ngIf="loginForm.controls.firstName.errors.required" class="error">Please enter your first name.</div>
+                </div>        
+                <div class="form-group">
+                    <label for="" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" #lastName value="{{editUser.lastName}}"  required >
+                </div>
+                <div *ngIf="submitDisabled && loginForm.controls.lastName.errors">
+                    <div *ngIf="loginForm.controls.lastName.errors.required" class="error">Please enter your last name.</div>    
+                </div>
+                <div class="form-group">
+                    <label for="" class="form-label">Email</label>
+                    <input type="email" class="form-control" #email value="{{editUser.email}}"  required >
+                </div>           
+                <div *ngIf="submitDisabled && loginForm.controls.email.errors">
+                    <div *ngIf="loginForm.controls.email.errors.required" class="error">Please enter your email.</div>
+                </div>
+                <div class="form-group">
+                    <label for="" class="form-label">Mobile Number</label>
+                    <input type="number"  class="form-control" #mobileNo value="{{editUser.mobileNo}}"  required>
+                </div>
+                <div *ngIf="submitDisabled && loginForm.controls.mobileNo.errors">    
+                    <div *ngIf="loginForm.controls.mobileNo.errors.required" class="error">Please enter your mobile number.</div>    
+                </div>
+                <div class="mt-2 text-center">
+                    <button type="submit" (click)="updateUser()" class="btn btn-primary">Update</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

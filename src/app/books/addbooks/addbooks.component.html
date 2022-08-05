@@ -1,0 +1,62 @@
+<div class="col-6 mx-auto mt-4">
+    <div class="card">     
+        <div class="card-body">
+            <h2>Add Book</h2>
+            <form [formGroup]="addBookForm" >
+                <div class="error">{{errorMessage}}</div>
+                <div class="form-group">
+                    <label for="" class="form-label">Book Name</label>
+                    <input type="userName" class="form-control" #BookName formControlName="bookname" required>
+                </div>        
+                <div *ngIf="submitDisabled && addBookForm.controls.bookname.errors">
+                    <div *ngIf="addBookForm.controls.bookname.errors.required" class="error">Please enter the book name.</div>
+                </div>    
+                <div class="form-group">
+                    <label for="" class="form-label">Description</label>
+                    <input type="text" class="form-control" #Descrption  formControlName="descrption" required>
+                </div>
+                <div *ngIf="submitDisabled && addBookForm.controls.descrption.errors">
+                    <div *ngIf="addBookForm.controls.descrption.errors.required" class="error">Please enter the book descrption.</div>
+                </div>
+                <div class="form-group">
+                    <label for="" class="form-label">Category</label>
+                    <input type="text" class="form-control" #category  formControlName="category" required>
+                </div>     
+                <div *ngIf="submitDisabled && addBookForm.controls.category.errors">
+                <div *ngIf="addBookForm.controls.category.errors.required" class="error">Please enter the book category.</div>
+               </div>     
+               <div class="form-group">
+                    <label for="" class="form-label">Author</label>
+                    <input type="text" class="form-control" #author  formControlName="author" required>  
+                </div>
+                <div *ngIf="submitDisabled && addBookForm.controls.author.errors">
+                    <div *ngIf="addBookForm.controls.author.errors.required" class="error">Please enter the book author name.</div>
+                </div>                
+                <div class="form-group">
+                    <label for="" class="form-label">Year Of Release</label>
+                   <input type="number" class="form-control" #year  formControlName="year" required>
+               </div>
+               <div *ngIf="submitDisabled && addBookForm.controls.year.errors">
+                 <div *ngIf="addBookForm.controls.year.errors.required" class="error">Please enter the book release year.</div>
+                </div>
+                <div class="form-group">
+                    <label for="" class="form-label">Rating</label>
+                    <input type="number" class="form-control" #rating  formControlName="rating" required>
+                </div>
+                <div *ngIf="submitDisabled && addBookForm.controls.rating.errors">
+                    <div *ngIf="addBookForm.controls.rating.errors.required" class="error">Please enter the book rating.</div>            
+                </div>
+                <div class="form-group">
+                    <label for="" class="form-label">Copies</label>
+                    <input type="number" class="form-control" #count  formControlName="copies" required>
+                </div>
+                <div *ngIf="submitDisabled && addBookForm.controls.copies.errors">
+                    <div *ngIf="addBookForm.controls.copies.errors.required" class="error">Please enter the number of book copies.</div>
+                </div>
+                <div class="mt-2 text-center">
+                    <button type="submit" (click)="addBook()" class="btn btn-primary">Add Book</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

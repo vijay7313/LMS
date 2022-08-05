@@ -1,0 +1,262 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "Thirukkural",
+      "description": "Ulaga Pothumarai",
+      "author": "Thiruvalluvar",
+      "yearOfRelease": "",
+      "category": "Tamil",
+      "image": "assets/images/thirukkural.png",
+      "rating": "5.0",
+      "count": "120"
+    },
+    {
+      "id": 2,
+      "title": "Angular",
+      "description": "Front end language",
+      "author": "Miško Hevery",
+      "yearOfRelease": "2009",
+      "category": "Technology",
+      "image": "assets/images/angular.png",
+      "rating": "4.0",
+      "count": 100
+    },
+    {
+      "id": 3,
+      "title": "Ponniyin Selvan",
+      "description": "it tells the story of early days of Arulmozhivarman who later became the great Chola emperor Rajaraja Chola",
+      "author": "Kalki",
+      "yearOfRelease": "1900",
+      "category": "Tamil",
+      "image": "assets/images/ponniyinselvan.png",
+      "rating": "4.5",
+      "count": 120
+    },
+    {
+      "id": 4,
+      "title": "Harry Potter",
+      "description": "The fantastical seven novels, magical world of coming-of-age,adventure, and suspense ignites and improves a child's imagination.",
+      "author": "J.K.Rowling",
+      "yearOfRelease": "1997",
+      "category": "English",
+      "image": "assets/images/harrypotter.png",
+      "rating": "4.0",
+      "count": "120"
+    },
+    {
+      "id": 5,
+      "title": "Java",
+      "description": "Object Oriented Programing Language",
+      "author": "James Gosling",
+      "yearOfRelease": "1952",
+      "category": "Technology",
+      "image": "assets/images/java.png",
+      "rating": "4.5",
+      "count": 100
+    },
+    {
+      "id": 6,
+      "title": "Stillness is the key",
+      "description": "Stillness Is The Key gives you the tools to harness the power of slowing down your body, mind for less distractions, better self-control, and above all, a happier and more peaceful life",
+      "author": "Ryan Holiday",
+      "yearOfRelease": "2019",
+      "category": "English",
+      "image": "assets/images/stillness.png",
+      "rating": "4.5",
+      "count": 100
+    },
+    {
+      "id": 7,
+      "title": "Sivagamiyin Sapatham",
+      "description": "Honour, love and friendship are important themes that run through the course of the novel.",
+      "author": "Kalki Krishnamurthy",
+      "yearOfRelease": "1944",
+      "category": "Tamil",
+      "image": "assets/images/SivagamiyinSabatham.jpg",
+      "rating": "4.0",
+      "count": 50
+    },
+    {
+      "id": 8,
+      "title": "Python",
+      "description": "Object Oriented Programing Language",
+      "author": "Guido van Rossum",
+      "yearOfRelease": "1992",
+      "category": "Technology",
+      "image": "assets/images/python.png",
+      "rating": "4.5",
+      "count": 100
+    },
+    {
+      "id": 9,
+      "title": "React",
+      "description": "React is a free and open-source front-end JavaScript library for building user interfaces based on UI components.",
+      "author": "Jordan Walke",
+      "yearOfRelease": "2017",
+      "category": "Technology",
+      "image": "assets/images/react.png",
+      "rating": "4.5",
+      "count": 100
+    },
+    {
+      "id": 10,
+      "title": "Kallikkattu Edhihasam",
+      "description": "It tells the agonising tale of a marginal farmer of a riverbed region of the Theni belt in southern Tamil Nadu.",
+      "author": "Vairamuthu",
+      "yearOfRelease": "1979",
+      "category": "Tamil",
+      "image": "assets/images/kallikattu.png",
+      "rating": "4.5",
+      "count": 100
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "firstName": "admin",
+      "lastName": "admin",
+      "userName": "admin",
+      "password": "123456",
+      "email": "admin@hexacorp.com",
+      "mobileNo": "9787675747",
+      "domain": "Full Stack-Developer",
+      "role": "admin"
+    },
+    {
+      "id": 2,
+      "firstName": "sridhar",
+      "lastName": "sagi",
+      "userName": "srisag",
+      "email": "sridhar.santhanakrishnan@hexacorp.com",
+      "mobileNo": "3454354543",
+      "password": "123456",
+      "domain": "developer",
+      "role": "user"
+    },
+    {
+      "id": 3,
+      "firstName": "vijay",
+      "lastName": "raja",
+      "userName": "vijraj",
+      "email": "vraja7313@gmail.com",
+      "mobileNo": "9788555520",
+      "password": "123456",
+      "domain": "developer",
+      "role": "user"
+    },
+    {
+      "id": 4,
+      "firstName": "vijayaraja",
+      "lastName": "V",
+      "userName": "vijv",
+      "email": "vraja7313@gmail.com",
+      "mobileNo": "9788555520",
+      "password": "123456",
+      "domain": "developer",
+      "role": "user"
+    }
+  ],
+  "cart": [
+    {
+      "id": 1,
+      "userId": 2,
+      "firstName": "sridhar",
+      "lastName": "sagi",
+      "bookId": 1,
+      "title": "Thirukural",
+      "description": "Ulaga Pothumarai",
+      "author": "Thiruvaluvar"
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "firstName": "sridhar",
+      "lastName": "sagi",
+      "bookId": 4,
+      "title": "Harry Potter",
+      "description": "The fantastical seven novels, magical world of coming-of-age,adventure, and suspense ignites and improves a child's imagination.",
+      "author": "J.K.Rowling"
+    },
+    {
+      "id": 3,
+      "userId": 2,
+      "firstName": "sridhar",
+      "lastName": "sagi",
+      "bookId": 6,
+      "title": "Stillness is the key",
+      "description": "Stillness Is The Key gives you the tools to harness the power of slowing down your body, mind for less distractions, better self-control, and above all, a happier and more peaceful life",
+      "author": "Ryan Holiday"
+    },
+    {
+      "id": 4,
+      "userId": 2,
+      "firstName": "sridhar",
+      "lastName": "sagi",
+      "bookId": 2,
+      "title": "Angular",
+      "description": "Front end language",
+      "author": "Miško Hevery"
+    },
+    {
+      "id": 5,
+      "userId": 2,
+      "firstName": "sridhar",
+      "lastName": "sagi",
+      "bookId": 6,
+      "title": "Stillness is the key",
+      "description": "Stillness Is The Key gives you the tools to harness the power of slowing down your body, mind for less distractions, better self-control, and above all, a happier and more peaceful life",
+      "author": "Ryan Holiday"
+    },
+    {
+      "id": 6,
+      "userId": 4,
+      "firstName": "vijayaraja",
+      "lastName": "V",
+      "bookId": 3,
+      "title": "Ponniyin Selvan",
+      "description": "it tells the story of early days of Arulmozhivarman who later became the great Chola emperor Rajaraja Chola",
+      "author": "Kalki"
+    },
+    {
+      "id": 7,
+      "userId": 4,
+      "firstName": "vijayaraja",
+      "lastName": "V",
+      "bookId": 4,
+      "title": "Harry Potter",
+      "description": "The fantastical seven novels, magical world of coming-of-age,adventure, and suspense ignites and improves a child's imagination.",
+      "author": "J.K.Rowling"
+    },
+    {
+      "id": 8,
+      "userId": 3,
+      "firstName": "vijay",
+      "lastName": "raja",
+      "bookId": 9,
+      "title": "React",
+      "description": "React is a free and open-source front-end JavaScript library for building user interfaces based on UI components.",
+      "author": "Jordan Walke"
+    },
+    {
+      "id": 9,
+      "userId": 3,
+      "firstName": "vijay",
+      "lastName": "raja",
+      "bookId": 7,
+      "title": "Sivagamiyin Sapatham",
+      "description": "Honour, love and friendship are important themes that run through the course of the novel.",
+      "author": "Kalki Krishnamurthy"
+    },
+    {
+      "id": 10,
+      "userId": 3,
+      "firstName": "vijay",
+      "lastName": "raja",
+      "bookId": 4,
+      "title": "Harry Potter",
+      "description": "The fantastical seven novels, magical world of coming-of-age,adventure, and suspense ignites and improves a child's imagination.",
+      "author": "J.K.Rowling"
+    }
+  ]
+}
